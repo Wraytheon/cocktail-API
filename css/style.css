@@ -1,15 +1,68 @@
-/******************************************
-/* CSS
-/*******************************************/
+/* Link to inspo: https://perishablepress.com/obsessive-css-code-formatting-organization-comments-and-signatures/ */
+/* CSS DIRECTORY: stylesheet navigation
+  1. =GLOBAL
+  2. =PRIMARY
+  3. =HEADER
+  4. =SIDEBAR
+  5. =FOOTER
+*/
+/* Hack DIRECTORY: include a key character within specific comments and hacks.
+  % box model hack
+  $ targets safari
+  & clearfix hack
+  ? targets IE 7
+*/
+/* COLORS
+  - default body text  #ffffcc
+  - subtitle h2 text   #ff9900
+  - form input borders #cc9933
+  - default p text     #f0f0f0
+  - pre borders        #ffff99
+*/
 
-/* Box Model Hack */
-*{
+/* FONTS
+  - default body text  Arial, Helvetica Neue, Helvetica, sans-serif
+  - subtitle h2 text   Garamond, Hoefler Text, Times New Roman, Times, serif
+  - form input text    Cambria, Georgia, Times, Times New Roman, Times, serif
+  - default p text     Copperplate Light, Copperplate Gothic Light, serif
+  - pre and code       Consolas, Lucida Console, Monaco, monospace
+*/
+
+:root {
+/* Colors */
+  --c-h1: ;
+  --c-bg: ;
+  --c-hover: ;
+
+/* Fonts */
+  --f-h1: ;
+  --f-input: ;
+
+}
+
+/**=== Global Styles ===*/
+* {
   box-sizing: border-box;
 }
 
-/******************************************
-/* LAYOUT
-/*******************************************/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.wrapper {
+  width: 80vw;
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+
+}
+
 img{
   display: block;
   height: 200px;
@@ -17,6 +70,29 @@ img{
 }
 
 
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+.hide {
+  display: none;
+}
+
+/*======================*/
+
+
+/**=== Header Styles ===*/
+
+/*======================*/
+
+
+/**=== Main Styles ===*/
+
+/*======================*/
+
+
+/**=== Header Styles ===*/
+
+/*======================*/
+
+
+/**=== Footer Styles ===*/
+
+/*======================*/
+

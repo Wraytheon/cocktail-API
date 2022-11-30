@@ -2,8 +2,7 @@
 document.querySelector("button").addEventListener("click", getDrink)
 
 function getDrink () {
-  let drink = "Lemon Drop"
-  // document.querySelector("input").value;
+  let drink =  document.querySelector("input").value;
 
   fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
                     /*Gets query value from drink input*/
