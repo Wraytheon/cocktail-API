@@ -67,6 +67,11 @@ ul {
 
 }
 
+#random {
+  display: block;
+  margin: 1rem auto;
+}
+
 img{
   display: block;
   height: 200px;
