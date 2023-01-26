@@ -55,6 +55,10 @@ body {
   max-width: 100%;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .wrapper {
   width: 80vw;
   max-width: 100%;
@@ -70,13 +74,13 @@ img{
 }
 
 /* Ingredients */
-.ingredients-cont {
+/* .ingredients-cont {
   display: grid;
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: repeat(12, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 0px;
-}
+} */
 
 /* .ingredients span, .ingredients > span {
   display: flex;
