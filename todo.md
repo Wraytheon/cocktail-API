@@ -1,5 +1,4 @@
 # To Do
 
 - [] Styling
-- [] Fix Ingredients list positioning
-- [] Add feature
+- [] If first letter of instructions is not capitalized, then convert to uppercase

@@ -1,83 +1,78 @@
-// Constants to store the API URL for searching and getting a random drink
+// Constants for the API URLs to get drinks data.
 const apiUrl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 const randomApiUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
-// Selecting the search button, random button, input field, and result container element from the HTML
+// DOM elements for the search and random buttons, and the input field.
 const searchBtn = document.querySelector("#search-btn");
 const randomBtn = document.querySelector("#random-btn");
 const input = document.querySelector("#input");
 
+// Function to get drink data from the API.
+function getDrinkData(url) {
+  // Drink name to be searched, initialized as an empty string.
+  let drinkName = "";
+  // If the URL is for searching, get the drink name from the input field.
+  if (url === apiUrl) {
+    drinkName = input.value;
+    // If the input field is empty, return without making a fetch request.
+    if (!drinkName) return;
+    // Append the drink name to the URL for the fetch request.
+    url += drinkName;
+  }
 
-// Adding a click event listener to the search button
-searchBtn.addEventListener("click", function () {
-  // Get the value of the input field
-  const drinkName = input.value;
-
-  // If the input field is empty, return and do nothing
-  if (!drinkName) return;
-
-  // Fetch the data from the API URL by concatenating the input value to the apiUrl constant
-  fetch(apiUrl + drinkName)
-    .then((res) => res.json()) // Convert the response to JSON
+  // Fetch the drink data from the API.
+  fetch(url)
+    .then((res) => res.json())
     .then((data) => {
-      // Get the first drink from the data and store it in a variable
+      //Log the data retrieved
+      console.log(data.drinks[0])
+      // Get the first drink from the returned data.
       const drink = data.drinks[0];
-
-      // Get the drink name, ingredients, and instructions
+      // Get the name of the drink.
       const drinkName = drink.strDrink;
+      // Array to store the ingredients.
       const ingredientArr = [];
+      // Loop through up to 15 ingredients.
       for (let i = 1; i <= 15; i++) {
-        // Check if there is no ingredient at the current iteration, break the loop
+        // If there is no ingredient for the current index, break the loop.
         if (!drink[`strIngredient${i}`]) break;
-        // Push the ingredient and its measure to the ingredientArr array
+        // Push the ingredient and its measure to the ingredients array.
         ingredientArr.push(
           `${drink[`strIngredient${i}`]} - ${drink[`strMeasure${i}`]}`
         );
       }
-      const ingredients = ingredientArr.join(", ")
+      // Join the ingredients array into a string.
+      const ingredients = ingredientArr.join(", ");
+      // Get the instructions for the drink.
       const instructions = drink.strInstructions;
+      // Get the image source for the drink.
+      const image = drink.strDrinkThumb;
 
-      // Update the HTML of the result container with the drink details
-      document.getElementById("result-container").classList.remove("hide")
-
+      // Set the drink name
       document.getElementById("drinkName").innerHTML = drinkName;
+      // Set the image source
+      document.querySelector("img").src = image
+      // Set the img alt text
+      document.querySelector("img").alt = `Photo of ${drinkName} in a ${drink.strGlass}`
 
+      // Set the instructions for the drink in the HTML.
       document.querySelector(".instructions").textContent = instructions;
+      // Set the ingredients for the drink in the HTML.
+      document.querySelector(".ingredients").textContent = ingredients;
 
-      document.querySelector(".ingredients").textContent = ingredients
+      // Remove the hide class from the result container to show the results.
+      document.getElementById("result-container").classList.remove("hide");
     });
+}
+
+// Event listener for the search button.
+searchBtn.addEventListener("click", function () {
+  // Call the getDrinkData function with the API URL for searching.
+  getDrinkData(apiUrl);
 });
 
-// Adding a click event listener to the random button
+// Event listener for the random button.
 randomBtn.addEventListener("click", function () {
-  // Fetch the data from the random API URL
-  fetch(randomApiUrl)
-    .then((res) => res.json()) // Convert the response to JSON
-    .then((data) => {
-      // Get the first drink from the data and store it in a variable
-      const drink = data.drinks[0];
-
-      // Get the drink name, ingredients, and instructions
-      const drinkName = drink.strDrink;
-      const ingredientArr = [];
-      for (let i = 1; i <= 15; i++) {
-        // Check if there is no ingredient at the current iteration, break the loop
-        if (!drink[`strIngredient${i}`]) break;
-        // Push the ingredient and its measure to the ingredientArr array
-        ingredientArr.push(
-          `${drink[`strIngredient${i}`]} - ${drink[`strMeasure${i}`]}`
-        );
-      }
-      const ingredients = ingredientArr.join(", ")
-      const instructions = drink.strInstructions;
-
-      // Update the HTML of the result container with the drink details
-      document.getElementById("result-container").classList.remove("hide")
-
-      document.getElementById("drinkName").innerHTML = drinkName;
-
-      document.querySelector(".instructions").textContent = instructions;
-
-      document.querySelector(".ingredients").textContent = ingredients
-    });
+  // Call the getDrinkData function with the API URL for searching.
+  getDrinkData(randomApiUrl);
 });
