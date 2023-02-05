@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    	<meta charset="utf-8">
-    	<meta name="description" content="This is where your description goes">
-    	<meta name="keywords" content="one, two, three">
-			<link rel="stylesheet" href="css/normalize.css">
-			<link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is where your description goes" />
+    <meta name="keywords" content="one, two, three" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-		<title>Title in the tab</title>
+    <title>Title in the tab</title>
 
-		<!-- external CSS link -->
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<div class="wrapper">
-			<div class="input-cont">
-				<h1>Which Cocktail?</h1>
-				<input type="text" name="" value="">
-				<button type="button" name="button">Search</button>
-				<button type="button" id="random">Random</button>
-			</div>
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Wrapper for the page content -->
+    <div class="wrapper">
+      <!-- Container for the input and buttons -->
+      <div class="input-cont">
+        <!-- Main heading -->
+        <h1>Which Cocktail?</h1>
+        <!-- Input field -->
+        <input type="text" name="" value="" id="input" />
+        <!-- Search button -->
+        <button type="button" name="button" id="search-btn">Search</button>
+        <!-- Random button -->
+        <button type="button" id="random-btn">Random</button>
+      </div>
+			
+      <!-- Container for the results -->
+      <div id="result-container" class="hide">
+        <!-- Heading for the drink name -->
+        <h2 id="drinkName"></h2>
 
-			<div class="results-cont">
-				<h2 class="name">Name</h2>
-				<img src="" alt="">
-				<h3 class="ingredients-title">Ingredients</h3>
-				<div class="ingredients-cont">
-					<!--!Create grid/columns for ingredients and amounts?-->
-					<ul class="ingredient">
-					</ul>
-				</div>
-				<h3>Instructions</h3>
-				<p class="instructions"></p>
-			</div>
+        <!-- Heading for the ingredients -->
+        <h3>Ingredients</h3>
+        <!-- Paragraph for the ingredients -->
+        <p class="ingredients"></p>
 
+        <!-- Heading for the instructions -->
+        <h3>Instructions</h3>
+        <!-- Paragraph for the instructions -->
+        <p class="instructions"></p>
+      </div>
+    </div>
 
-		</div>
-
-		<script type="text/javascript" src="js/config.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-	</body>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>
