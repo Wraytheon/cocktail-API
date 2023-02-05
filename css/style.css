@@ -45,19 +45,18 @@
   box-sizing: border-box;
 }
 
-/* Set the default font size of the HTML element to 62.5% */
 html {
   font-size: 62.5%;
 }
 
-/* Set the font size of the body element to 1.6 rem and the width to 100vw (100% of the viewport width) with a maximum width of 100% */
 body {
   font-size: 1.6rem;
   width: 100vw;
   max-width: 100%;
+  background-color: #f2f2f2;
+  padding: 2rem 0;
 }
 
-/* Center the wrapper element with a width of 80vw and a maximum width of 100% */
 .wrapper {
   width: 80vw;
   max-width: 100%;
@@ -65,37 +64,58 @@ body {
   text-align: center;
 }
 
-/* Style the random button with a display property of block and a margin of 1 rem auto */
+h1 {
+  margin: 0 0 1rem 0;
+}
+
+#input {
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  width: 30%;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+button:hover {
+  background-color: #666;
+}
+
 #random-btn {
   display: block;
   margin: 1rem auto;
 }
 
-/* Set the display property of the hide class to none */
 .hide {
   display: none;
 }
 
-/* Style the row class with a display property of flex, allowing the elements within to wrap if necessary */
 .row {
   display: flex;
   flex-wrap: wrap;
 }
 
-/* Style the first column (col-1) with a flexible width (1) and text alignment of left, with a margin-right of 2 rem */
 .col-1 {
   flex: 1;
   text-align: left;
   margin-right: 2rem;
 }
 
-/* Style the second column (col-2) with a flexible width (1) and text alignment of right */
 .col-2 {
   flex: 1;
   text-align: right;
 }
 
-/* Style the image element with a width of 30vw */
 img {
   width: 30vw;
 }
