@@ -25,16 +25,16 @@
       <form>
         <h1>Cocktail Finder</h1>
         <div class="form-group">
-          <label for="searchInput">Search</label>
-          <input type="text" class="form-control" id="searchInput" aria-describedby="searchInputHelp">
-          <small id="searchInputHelp" class="form-text text-muted">Enter the ingredient or cocktail name you're searching for.</small>
-        </div>
-        <div class="form-group">
           <label for="searchType">Search By:</label>
           <select class="form-control" id="searchType">
             <option value="ingredient">Ingredient</option>
             <option value="cocktail name">Cocktail Name</option>
           </select>
+        </div>
+        <div class="form-group">
+          <label for="searchInput">Search</label>
+          <input type="text" class="form-control" id="searchInput" aria-describedby="searchInputHelp">
+          <small id="searchInputHelp" class="form-text text-muted">Enter the ingredient or cocktail name you're searching for.</small>
         </div>
         <button type="submit" class="btn btn-primary">Search</button>
         <button type="button" class="btn btn-secondary">Random</button>
