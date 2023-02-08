@@ -22,23 +22,17 @@
   <body>
     <!-- Wrapper for the page content -->
     <div class="wrapper">
-      <form>
+      <!-- Container for the input and buttons -->
+      <div class="input-cont">
+        <!-- Main heading -->
         <h1>Cocktail Finder</h1>
-        <div class="form-group">
-          <label for="searchType">Search By:</label>
-          <select class="form-control" id="searchType">
-            <option value="ingredient">Ingredient</option>
-            <option value="cocktail name">Cocktail Name</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="input">Search</label>
-          <input type="text" class="form-control" id="input" aria-describedby="searchInputHelp">
-          <small id="searchInputHelp" class="form-text text-muted">Enter the ingredient or cocktail name you're searching for.</small>
-        </div>
-        <button id="search-btn" type="submit" class="btn btn-primary">Search</button>
-        <button id="random-btn" type="button" class="btn btn-secondary">Random</button>
-      </form>
+        <!-- Input field -->
+        <input type="text" name="" value="" id="input" />
+        <!-- Search button -->
+        <button type="button" name="button" id="search-btn">Search</button>
+        <!-- Random button -->
+        <button type="button" id="random-btn">Random</button>
+      </div>
 
       <!-- Container for the results -->
       <div id="result-container" class="hide">
@@ -70,14 +64,3 @@
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
-<!-- 
-<select id="search-dropdown">
-  <option disabled selected hidden>Search By:</option>
-  <option id="ingredient-search" value="ingredient">Ingredient</option>
-  <option id="name-search" value="cocktail-name">Cocktail Name</option>
-</select>
-<!-- Search button
-<button type="button" name="button" id="search-btn">Search By:</button>
-<!-- Random button
-<button type="button" id="random-search">Random</button>
--->
