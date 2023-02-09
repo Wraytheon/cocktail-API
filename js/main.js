@@ -64,7 +64,12 @@ function getDrinkData(url) {
       document.getElementById("result-container").classList.remove("hide");
     });
 }
+function updateCarousel() {
+getDrinkData(randomApiUrl);
+}
 
+// Call the updateCarousel function every 2 seconds.
+setInterval(updateCarousel, 2000);
 // Event listener for the search button.
 searchBtn.addEventListener("click", function () {
   // Call the getDrinkData function with the API URL for searching.
