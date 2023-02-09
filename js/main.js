@@ -72,7 +72,7 @@ searchBtn.addEventListener("click", function () {
 });
 
 // Event listener for the random button.
-randomBtn.addEventListener("click", function () {
+window.addEventListener("load", function () {
   // Call the getDrinkData function with the API URL for searching.
   getDrinkData(randomApiUrl);
 });
