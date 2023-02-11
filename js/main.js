@@ -65,8 +65,9 @@ function getDrinkData(url) {
 
       // Set the instructions for the drink in the HTML.
       instructions === "" ? document.querySelector(".instructions").textContent = "None found" : document.querySelector(".instructions").textContent = instructions;
+      
       // Set the ingredients for the drink in the HTML.
-      document.querySelector(".ingredients").textContent = ingredients;
+      ingredients === "" ? document.querySelector(".ingredients").textContent = "Not found" : document.querySelector(".ingredients").textContent = ingredients;
 
       // Remove the hide class from the result container to show the results.
       document.getElementById("result-container").classList.remove("hide");
