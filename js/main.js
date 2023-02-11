@@ -37,9 +37,16 @@ function getDrinkData(url) {
         // If there is no ingredient for the current index, break the loop.
         if (!drink[`strIngredient${i}`]) break;
         // Push the ingredient and its measure to the ingredients array.
-        ingredientArr.push(
-          `${drink[`strIngredient${i}`]} - ${drink[`strMeasure${i}`]}`
-        );
+        //! Set each list item to new line and flip measures/ingredients?
+        if (drink[`strMeasure${i}`] === null) {
+          ingredientArr.push(
+            `${drink[`strIngredient${i}`]}`
+          ) 
+        } else {
+          ingredientArr.push(
+            `${drink[`strMeasure${i}`]} ${drink[`strIngredient${i}`]}`
+          )
+        }
       }
       // Join the ingredients array into a string.
       const ingredients = ingredientArr.join(", ");
@@ -48,14 +55,6 @@ function getDrinkData(url) {
       // Get the image source for the drink.
       const image = drink.strDrinkThumb;
 
-      
-      // if (instructions === null || instructions === "") {
-      //   console.log(`ingredients: ${ingredients}, instructions: ${instructions}`)
-
-      //   document.querySelector(".instructions").textContent = "None found";
-      // } else {
-      //   document.querySelector(".instructions").textContent = instructions;
-      // }
       // Set the drink name
       document.getElementById("drinkName").innerHTML = drinkName;
       // Set the image source
@@ -64,8 +63,9 @@ function getDrinkData(url) {
       document.querySelector("img").alt = `Photo of ${drinkName} in a ${drink.strGlass}`
 
       // Set the instructions for the drink in the HTML.
+      //! Change to '=== null?'
       instructions === "" ? document.querySelector(".instructions").textContent = "None found" : document.querySelector(".instructions").textContent = instructions;
-      
+
       // Set the ingredients for the drink in the HTML.
       ingredients === "" ? document.querySelector(".ingredients").textContent = "Not found" : document.querySelector(".ingredients").textContent = ingredients;
 
