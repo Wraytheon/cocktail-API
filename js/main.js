@@ -48,6 +48,14 @@ function getDrinkData(url) {
       // Get the image source for the drink.
       const image = drink.strDrinkThumb;
 
+      
+      // if (instructions === null || instructions === "") {
+      //   console.log(`ingredients: ${ingredients}, instructions: ${instructions}`)
+
+      //   document.querySelector(".instructions").textContent = "None found";
+      // } else {
+      //   document.querySelector(".instructions").textContent = instructions;
+      // }
       // Set the drink name
       document.getElementById("drinkName").innerHTML = drinkName;
       // Set the image source
@@ -56,7 +64,7 @@ function getDrinkData(url) {
       document.querySelector("img").alt = `Photo of ${drinkName} in a ${drink.strGlass}`
 
       // Set the instructions for the drink in the HTML.
-      document.querySelector(".instructions").textContent = instructions;
+      instructions === "" ? document.querySelector(".instructions").textContent = "None found" : document.querySelector(".instructions").textContent = instructions;
       // Set the ingredients for the drink in the HTML.
       document.querySelector(".ingredients").textContent = ingredients;
 
@@ -69,7 +77,7 @@ getDrinkData(randomApiUrl);
 }
 
 // Call the updateCarousel function every 2 seconds.
-setInterval(updateCarousel, 2000);
+// setInterval(updateCarousel, 3000);
 // Event listener for the search button.
 searchBtn.addEventListener("click", function () {
   // Call the getDrinkData function with the API URL for searching.
@@ -77,7 +85,7 @@ searchBtn.addEventListener("click", function () {
 });
 
 // Event listener for the random button.
-window.addEventListener("load", function () {
-  // Call the getDrinkData function with the API URL for searching.
-  getDrinkData(randomApiUrl);
-});
+// window.addEventListener("load", function () {
+//   // Call the getDrinkData function with the API URL for searching.
+//   getDrinkData(randomApiUrl);
+// });
