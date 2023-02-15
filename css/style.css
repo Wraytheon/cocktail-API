@@ -101,6 +101,10 @@ button:hover {
   display: none;
 }
 
+.show {
+  display: initial;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
