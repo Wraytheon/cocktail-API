@@ -73,57 +73,14 @@ function getDrinkData(url) {
       document.getElementById("result-container").classList.remove("hide");
     });
 }
+window.addEventListener("load", updateCarousel) 
+function updateCarousel() {
+getDrinkData(randomApiUrl);
+
+};
 
 // Call the updateCarousel function every 2 seconds.
 setInterval(updateCarousel, 3000);
-// Global variable to keep track of the current slide index.
-let currentSlide = 0;
-
-// Get all the slides in the carousel.
-const slides = document.querySelectorAll(".slide");
-
-// Update the carousel by showing the current slide and hiding the others.
-function updateCarousel() {
-  getDrinkData(randomApiUrl);
-  slides.forEach((slide, index) => {
-    if (index === currentSlide) {
-      slide.classList.add("show");
-      slide.classList.remove("hide");
-    } else {
-      slide.classList.add("hide");
-      slide.classList.remove("show");
-    }
-  });
-}
-
-// Function to move to the next slide.
-function nextSlide() {
-  currentSlide++;
-  if (currentSlide >= slides.length) {
-    currentSlide = 0;
-  }
-  updateCarousel();
-}
-
-// Function to move to the previous slide.
-function prevSlide() {
-  currentSlide--;
-  if (currentSlide < 0) {
-    currentSlide = slides.length - 1;
-  }
-  updateCarousel();
-}
-
-// Attach event listeners to the next and previous buttons.
-const nextBtn = document.querySelector("#next-btn");
-const prevBtn = document.querySelector("#prev-btn");
-nextBtn.addEventListener("click", nextSlide);
-prevBtn.addEventListener("click", prevSlide);
-
-// Update the carousel on page load.
-updateCarousel();
-
-
 // Event listener for the search button.
 searchBtn.addEventListener("click", function () {
   // Call the getDrinkData function with the API URL for searching.
