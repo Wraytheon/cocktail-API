@@ -1,139 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="This is where your description goes" />
-    <meta name="keywords" content="one, two, three" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/style.css" />
 
-    <title>Cocktail Search</title>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="This is where your description goes" />
+	<meta name="keywords" content="one, two, three" />
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+	<link rel="stylesheet" href="css/style.css" />
 
-    <!-- external CSS link -->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-<!-- Wrapper for the page content -->
-<div class="wrapper">
-	<!-- Container for the input and buttons -->
-	<div class="input-cont">
-		<!-- Main heading -->
-		<h1>Cocktail Finder</h1>
-		<!-- Input field -->
-		<input type="text" name="" value="" id="input" />
-		<!-- Search button -->
-		<button type="button" name="button" id="search-btn">Search</button>
-		<!-- Random button -->
-		<button type="button" id="random-btn">Random</button>
-	</div>
+	<title>Cocktail Search</title>
 
-	<!-- Container for the results -->
-	<div id="result-container" class="hide">
-		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-			<div class="carousel-inner">
-				<div id="slide-1" class="carousel-item active">
-					<!-- Row container for the drink details and image -->
-					<div class="row slide">
-						<!-- Column for the drink details -->
-						<div class="col-1">
-							<!-- Heading for the drink name -->
-							<h2 id="drinkName"></h2>
+	<!-- external CSS link -->
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
 
-							<!-- Heading for the ingredients -->
-							<h3>Ingredients</h3>
-							<!-- Paragraph for the ingredients -->
-							<p class="ingredients"></p>
-
-							<!-- Heading for the instructions -->
-							<h3>Instructions</h3>
-							<!-- Paragraph for the instructions -->
-							<p class="instructions"></p>
-						</div>
-						<!-- Column for the drink image -->
-						<div class="col-2">
-							<img src="" alt="" />
-						</div>
-					</div>
-				</div>
-
-				<div id="slide-2" class="carousel-item">
-					<!-- Row container for the drink details and image -->
-					<div class="row slide">
-						<!-- Column for the drink details -->
-						<div class="col-1">
-							<!-- Heading for the drink name -->
-							<h2 id="drinkName"></h2>
-
-							<!-- Heading for the ingredients -->
-							<h3>Ingredients</h3>
-							<!-- Paragraph for the ingredients -->
-							<p class="ingredients"></p>
-
-							<!-- Heading for the instructions -->
-							<h3>Instructions</h3>
-							<!-- Paragraph for the instructions -->
-							<p class="instructions"></p>
-						</div>
-						<!-- Column for the drink image -->
-						<div class="col-2">
-							<img src="" alt="" />
-						</div>
-					</div>
-				</div>
-
-				<div id="slide-3" class="carousel-item">
-					<!-- Row container for the drink details and image -->
-					<div class="row slide">
-						<!-- Column for the drink details -->
-						<div class="col-1">
-							<!-- Heading for the drink name -->
-							<h2 id="drinkName"></h2>
-
-							<!-- Heading for the ingredients -->
-							<h3>Ingredients</h3>
-							<!-- Paragraph for the ingredients -->
-							<p class="ingredients"></p>
-
-							<!-- Heading for the instructions -->
-							<h3>Instructions</h3>
-							<!-- Paragraph for the instructions -->
-							<p class="instructions"></p>
-						</div>
-						<!-- Column for the drink image -->
-						<div class="col-2">
-							<img src="" alt="" />
-						</div>
-					</div>
-				</div>
-				<!-- Carousel buttons -->
-				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
-			</div>
+<body>
+	<!-- Wrapper for the page content -->
+	<div class="wrapper">
+		<!-- Container for the input and buttons -->
+		<div class="input-cont">
+			<!-- Main heading -->
+			<h1>Cocktail Finder</h1>
+			<!-- Input field -->
+			<input type="text" name="" value="" id="input" />
+			<!-- Search button -->
+			<button type="button" name="button" id="search-btn">Search</button>
+			<!-- Random button -->
+			<button type="button" id="random-btn">Random</button>
 		</div>
 
+		<!-- Container for the results -->
+		<div id="result-container" class="hide">
+			<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					<div id="slide-1" class="carousel-item active">
+						<!-- Row container for the drink details and image -->
+						<div class="row slide">
+							<!-- Column for the drink details -->
+							<div class="col-1">
+								<!-- Heading for the drink name -->
+								<h2 id="drinkName"></h2>
+
+								<!-- Heading for the ingredients -->
+								<h3>Ingredients</h3>
+								<!-- Paragraph for the ingredients -->
+								<p class="ingredients"></p>
+
+								<!-- Heading for the instructions -->
+								<h3>Instructions</h3>
+								<!-- Paragraph for the instructions -->
+								<p class="instructions"></p>
+							</div>
+							<!-- Column for the drink image -->
+							<div class="col-2">
+								<img src="" alt="" />
+							</div>
+						</div>
+					</div>
+
+					<div id="slide-2" class="carousel-item">
+						<!-- Row container for the drink details and image -->
+						<div class="row slide">
+							<!-- Column for the drink details -->
+							<div class="col-1">
+								<!-- Heading for the drink name -->
+								<h2 id="drinkName"></h2>
+
+								<!-- Heading for the ingredients -->
+								<h3>Ingredients</h3>
+								<!-- Paragraph for the ingredients -->
+								<p class="ingredients"></p>
+
+								<!-- Heading for the instructions -->
+								<h3>Instructions</h3>
+								<!-- Paragraph for the instructions -->
+								<p class="instructions"></p>
+							</div>
+							<!-- Column for the drink image -->
+							<div class="col-2">
+								<img src="" alt="" />
+							</div>
+						</div>
+					</div>
+
+					<div id="slide-3" class="carousel-item">
+						<!-- Row container for the drink details and image -->
+						<div class="row slide">
+							<!-- Column for the drink details -->
+							<div class="col-1">
+								<!-- Heading for the drink name -->
+								<h2 id="drinkName"></h2>
+
+								<!-- Heading for the ingredients -->
+								<h3>Ingredients</h3>
+								<!-- Paragraph for the ingredients -->
+								<p class="ingredients"></p>
+
+								<!-- Heading for the instructions -->
+								<h3>Instructions</h3>
+								<!-- Paragraph for the instructions -->
+								<p class="instructions"></p>
+							</div>
+							<!-- Column for the drink image -->
+							<div class="col-2">
+								<img src="" alt="" />
+							</div>
+						</div>
+					</div>
+					<!-- Carousel buttons -->
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+						data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+						data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+
+		</div>
 	</div>
-</div>
-</div>
-    <script type="text/javascript" src="js/config.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+	</div>
+	<script type="text/javascript" src="js/config.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+		crossorigin="anonymous"></script>
+</body>
+
 </html>

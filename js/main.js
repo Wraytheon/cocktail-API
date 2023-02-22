@@ -69,18 +69,23 @@ function getDrinkData(url) {
       // Set the ingredients for the drink in the HTML.
       ingredients === "" ? document.querySelector(".ingredients").textContent = "Not found" : document.querySelector(".ingredients").textContent = ingredients;
 
+
       // Remove the hide class from the result container to show the results.
       document.getElementById("result-container").classList.remove("hide");
     });
 }
-window.addEventListener("load", updateCarousel) 
+window.addEventListener("load", updateCarousel)
 function updateCarousel() {
-getDrinkData(randomApiUrl);
+  getDrinkData(randomApiUrl)
+}
+// window.addEventListener("load", updateCarousel) 
+// function updateCarousel() {
+// getDrinkData(randomApiUrl);
 
-};
+// };
 
 // Call the updateCarousel function every 2 seconds.
-setInterval(updateCarousel, 3000);
+// setInterval(updateCarousel, 3000);
 // Event listener for the search button.
 searchBtn.addEventListener("click", function () {
   // Call the getDrinkData function with the API URL for searching.
