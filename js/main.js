@@ -58,9 +58,9 @@ function getDrinkData(url) {
       // Set the drink name
       document.getElementById("drinkName").innerHTML = drinkName;
       // Set the image source
-      document.querySelector("img").src = image
+      document.querySelector(".img-result").src = image
       // Set the img alt text
-      document.querySelector("img").alt = `Photo of ${drinkName} in a ${drink.strGlass}`
+      document.querySelector(".img-result").alt = `Photo of ${drinkName} in a ${drink.strGlass}`
 
       // Set the instructions for the drink in the HTML.
       //! Change to '=== null?'
@@ -74,26 +74,22 @@ function getDrinkData(url) {
       document.getElementById("result-container").classList.remove("hide");
     });
 }
+
+// Call the getDrinkData function with the randomApiUrl on page load
 window.addEventListener("load", updateCarousel)
 function updateCarousel() {
   getDrinkData(randomApiUrl)
 }
-// window.addEventListener("load", updateCarousel) 
-// function updateCarousel() {
-// getDrinkData(randomApiUrl);
+// Show a random drink every 6 seconds starting on page load
+randomBtn.addEventListener("click", updateCarousel)
 
-// };
 
 // Call the updateCarousel function every 2 seconds.
-// setInterval(updateCarousel, 3000);
+setInterval(updateCarousel, 6000);
+
 // Event listener for the search button.
 searchBtn.addEventListener("click", function () {
   // Call the getDrinkData function with the API URL for searching.
   getDrinkData(apiUrl);
 });
 
-// Event listener for the random button.
-// window.addEventListener("load", function () {
-//   // Call the getDrinkData function with the API URL for searching.
-//   getDrinkData(randomApiUrl);
-// });
