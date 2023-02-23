@@ -74,21 +74,27 @@ function getDrinkData(url) {
       document.getElementById("result-container").classList.remove("hide");
     });
 }
-
-// Call the getDrinkData function with the randomApiUrl on page load
-window.addEventListener("load", updateCarousel)
-function updateCarousel() {
+function setRandomUrl() {
   getDrinkData(randomApiUrl)
 }
 // Show a random drink every 6 seconds starting on page load
-randomBtn.addEventListener("click", updateCarousel)
+window.addEventListener("load", setRandomUrl)
+//Stops the repeated random drinks once button is clicked
+randomBtn.addEventListener("click", function () {
+  clearInterval(intervalId)
+})
+// Call the getDrinkData function with the randomApiUrl on page load
+randomBtn.addEventListener("click", setRandomUrl)
 
 
-// Call the updateCarousel function every 2 seconds.
-setInterval(updateCarousel, 6000);
+
+// Call the setRandomUrl function every 2 seconds.
+let intervalId = setInterval(setRandomUrl, 6000);
 
 // Event listener for the search button.
 searchBtn.addEventListener("click", function () {
+  //Stops the random drinks
+  clearInterval(intervalId)
   // Call the getDrinkData function with the API URL for searching.
   getDrinkData(apiUrl);
 });
