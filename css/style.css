@@ -54,7 +54,6 @@ body {
   width: 100vw;
   max-width: 100%;
   background-color: #f2f2f2;
-  padding: 1rem 0;
 }
 
 .wrapper {
@@ -64,13 +63,18 @@ body {
   text-align: center;
 }
 
+.title-img {
+  width: 30%;
+}
+
 h1 {
   margin: 0 0 1rem 0;
   font-family: 'Gloock', serif;
+  font-size: 3.5vw;
 }
 
 #input {
-  padding: 1rem;
+  padding: .5rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-bottom: 1rem;
@@ -79,7 +83,7 @@ h1 {
 }
 
 button {
-  padding: 1rem;
+  padding: .7rem;
   border-radius: 5px;
   border: none;
   background-color: #333;
@@ -95,7 +99,7 @@ button:hover {
 
 #random-btn {
   display: block;
-  margin: 1rem auto;
+  margin: 0 auto;
 }
 
 .hide {
@@ -105,7 +109,9 @@ button:hover {
 .show {
   display: initial;
 }
-
+#result-container {
+  margin: 1rem 0;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -122,8 +128,23 @@ button:hover {
   text-align: right;
 }
 
-img {
-  width: 30vw;
+.img-result {
+  width: 40vw;
+}
+
+/*Where image starts overflowing vh */
+@media screen and (min-width: 865px) {
+  .img-result {
+    width: 37vw;
+  }
+
+}
+
+@media screen and (min-width: 920px) {
+  .img-result {
+    width: 31vw;
+  }
+
 }
 
 
