@@ -5,7 +5,6 @@ CocktailHunt is an application that allows users to search for cocktail recipes 
 ## Technologies Used
 The following technologies were used to build this application:
 - Bootstrap HTML
-- Semantic HTML
 - CSS
 - Vanilla JavaScript
 - [TheCocktailDB Api](https://www.thecocktaildb.com/api.php)
