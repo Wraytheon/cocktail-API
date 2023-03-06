@@ -32,11 +32,12 @@ h1 {
 }
 
 #input {
-  padding: .5rem;
+  font-size: 1.5rem;
+  padding: .7rem .7rem;
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-bottom: 1rem;
-  width: 30%;
+  width: 40%;
   line-height: 1.5;
 }
 
