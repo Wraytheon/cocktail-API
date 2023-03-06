@@ -1,45 +1,3 @@
-/* Link to inspo: https://perishablepress.com/obsessive-css-code-formatting-organization-comments-and-signatures/ */
-/* CSS DIRECTORY: stylesheet navigation
-  1. =GLOBAL
-  2. =PRIMARY
-  3. =HEADER
-  4. =SIDEBAR
-  5. =FOOTER
-*/
-/* Hack DIRECTORY: include a key character within specific comments and hacks.
-  % box model hack
-  $ targets safari
-  & clearfix hack
-  ? targets IE 7
-*/
-/* COLORS
-  - default body text  #ffffcc
-  - subtitle h2 text   #ff9900
-  - form input borders #cc9933
-  - default p text     #f0f0f0
-  - pre borders        #ffff99
-*/
-
-/* FONTS
-  - default body text  Arial, Helvetica Neue, Helvetica, sans-serif
-  - subtitle h2 text   Garamond, Hoefler Text, Times New Roman, Times, serif
-  - form input text    Cambria, Georgia, Times, Times New Roman, Times, serif
-  - default p text     Copperplate Light, Copperplate Gothic Light, serif
-  - pre and code       Consolas, Lucida Console, Monaco, monospace
-*/
-
-:root {
-/* Colors */
-  --c-h1: ;
-  --c-bg: ;
-  --c-hover: ;
-
-/* Fonts */
-  --f-h1: ;
-  --f-input: ;
-
-}
-
 /* Reset the default box-sizing property of all elements to border-box */
 * {
   box-sizing: border-box;
@@ -110,7 +68,7 @@ button:hover {
   display: initial;
 }
 #result-container {
-  margin: 1rem 0;
+  margin: 3rem 0;
 }
 .row {
   display: flex;
@@ -132,6 +90,28 @@ button:hover {
   width: 40vw;
 }
 
+
+@media screen and (max-width: 500px) {
+  #drinkName {
+    margin: .5rem 0;
+  }
+  .col-1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  .col-2 {
+    text-align: center;
+  }
+  .row {
+    flex-direction: column-reverse;
+    
+  }
+  .img-result {
+    width: 80vw;
+  }
+}
 /*Where image starts overflowing vh */
 @media screen and (min-width: 865px) {
   .img-result {
