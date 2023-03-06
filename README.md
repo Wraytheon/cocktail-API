@@ -1,6 +1,6 @@
 # CocktailHunt
-
-This is a web application that allows users to search for a cocktail and get a picture, name, ingredients and instructions on how to make it.
+![](readme-img/cocktail-Demo-Pic.png)
+CocktailHunt is an application that allows users to search for cocktail recipes and discover new drinks. The app is built with HTML, CSS, and JavaScript and uses the TheCocktailDB API to retrieve cocktail information.
 
 ## Technologies Used
 The following technologies were used to build this application:
@@ -8,17 +8,27 @@ The following technologies were used to build this application:
 - Semantic HTML
 - CSS
 - Vanilla JavaScript
-
+- [TheCocktailDB Api](https://www.thecocktaildb.com/api.php)
 ## Features
 The Cocktail Finder App comes with the following features:
-- Search for a cocktail by name
-Get a picture of the cocktail
-See the name of the cocktail
-View the ingredients of the cocktail
-Get instructions on how to make the cocktail
+- Search for cocktails by name using the input field and search button.
+- Get a random cocktail by clicking the "Random" button.
+- View cocktail details such as the list of ingredients and instructions for preparation.
 
 ### Usage
+[Click here to open live demo](https://github.com/Wraytheon/cocktail-API)
 To use the Cocktail Finder App, simply type in the name of the cocktail you want to search for in the search bar and click the search button. The application will then display the picture, name, ingredients and instructions of the cocktail. Alternatively, you can click the "random" button to view a random cocktail.
+
+### Contributing
+Contributions to the project are welcome. To contribute, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch with a descriptive name for your feature or bug fix.
+3. Make changes to the code.
+4. Test your changes to make sure they work as expected.
+5. Commit your changes.
+6. Push your changes to your fork.
+7. Submit a pull request.
 
 #### Credits
 This application was built using the following resources:
