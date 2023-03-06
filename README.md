@@ -10,6 +10,7 @@ The following technologies were used to build this application:
 - [TheCocktailDB Api](https://www.thecocktaildb.com/api.php)
 ## Features
 The Cocktail Finder App comes with the following features:
+- Random cocktail generated every few seconds on page load to give user ideas of drinks to search
 - Search for cocktails by name using the input field and search button.
 - Get a random cocktail by clicking the "Random" button.
 - View cocktail details such as the list of ingredients and instructions for preparation.
