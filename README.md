@@ -16,7 +16,7 @@ The Cocktail Finder App comes with the following features:
 - View cocktail details such as the list of ingredients and instructions for preparation.
 
 ### Usage
-[Click here to open live demo](https://github.com/Wraytheon/cocktail-API)
+[Click here to open live demo](https://Wraytheon.github.io/cocktail-API/)
 To use the Cocktail Finder App, simply type in the name of the cocktail you want to search for in the search bar and click the search button. The application will then display the picture, name, ingredients and instructions of the cocktail. Alternatively, you can click the "random" button to view a random cocktail.
 
 ### Contributing
